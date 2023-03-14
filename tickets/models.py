@@ -26,12 +26,12 @@ class Ticket(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     closed_at = models.DateTimeField(null=True, blank=True)
     STATUS_CHOICES = (
-        ("Pending", "Pending"),
-        ("Completed", "Completed"),
+        ("Open", "Open"),
+        ("Closed", "Closed"),
     )
-    status = models.CharField(max_length=200, choices=STATUS_CHOICES, default="Pending")
+    status = models.CharField(max_length=200, choices=STATUS_CHOICES, default="Open")
 
-    prority = models.IntegerField() 
+    priority = models.IntegerField() 
 
     def __str__(self):
 

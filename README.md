@@ -1,41 +1,42 @@
-
 # Ticketing System
 
-
 This is a ticketing system for a company. It is a web application that allows users to create tickets and assign them to other users. It also allows users to comment on tickets and mark them as resolved. It also allows users to view all the tickets assigned to them and all the tickets they have created.
-
 
 ## Installation
 
 - Fork and clone the project,  and add a upstream remote to track main repo changes
- ```
-        $ git clone git@github.com:{username}/ticketing-system.git
-        $ cd ticketing-system
-        $ git remote add upstream git@github.com:yasharora102/ticketing-system.git
+
+```bash
+    $ git clone git@github.com:{username}/ticketing-system.git
+    $ cd ticketing-system
+    $ git remote add upstream git@github.com:yasharora102/ticketing-system.git
 ```
 
 Create a python 3 virtualenv, and activate the environment.
+
 ```bash
         $ virtualenv venv
         $ source bin/activate 
 ```
 
 ⛔️After installing new packages, update the requirements.txt file⛔️
+
 ```bash
         $ pip freeze > requirements.txt
 ```
 
 Install the project dependencies from `requirements.txt`
+
 ```
         $ pip install -r requirements.txt
 ```
 
 ## Setup
 
-* `python manage.py makemigrations` to commit the database version
-* `python manage.py migrate --run-syncdb` - set up database
-* `python manage.py createsuperuser` - create admin user
-* `python manage.py runserver`  - run the project locally
+- `python manage.py makemigrations` to commit the database version
+- `python manage.py migrate --run-syncdb` - set up database
+- `python manage.py createsuperuser` - create admin user
+- `python manage.py runserver`  - run the project locally
 
 <!-- ## Docker Setup
 
@@ -44,6 +45,7 @@ Install the project dependencies from `requirements.txt`
 * `docker-compose exec web python3 manage.py migrate --run-syncdb` - set up database
 * `docker-compose exec web python3 manage.py createsuperuser` - create admin user
 * `docker-compose exec web python3 manage.py runserver`  - run the project locally -->
+
 <!-- 
 To add the django crontab, run the following command
 ```
@@ -80,5 +82,3 @@ For removing the docker containers, run the following command
 - Use `black` for formatting the code.
 - `black` is already installed in the project dependencies.
 - To format the code, run `black .` in the project root directory.
-
-
